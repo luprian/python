@@ -1,1 +1,7 @@
-To complete
+The purpose of this script is to extract Australian region IPv4 Azure IPs and place these in a text file. 
+
+It emails the result of whether the script ran successfully.
+
+To ensure that the output file is upto date, the script checks if the output file is existing, if so it will remove this before writing to it.
+
+If you would like to include IPv6 addresses, remove line 38.
