@@ -7,3 +7,7 @@ If ports are in ap_int_down and remaining_int_down, change to VLAN 999 untagged 
 If ports are in disabled_ports and don't have VLAN 999 untagged, apply VLAN 999 untagged <br />
 Set WAN port to VLAN 999 untagged <br />
 Set floor ports 7-40 to VLAN 999 untagged if not already <br />
+
+You need to have hp_procurve_show_vlans_int_XX_detail.textfsm in your python script directory as I can't work out how to get this into ntc templates index correctly. 
+
+You also need to have the switch host name file present to import.
