@@ -1,13 +1,20 @@
 ## Import modules ##
 
 import netmiko
+import logging
 
+from datetime import datetime
 from netmiko import ConnectHandler
 from getpass4 import getpass
 
+## Logging functionality - uncomment when required ##
+
+#logging.basicConfig(filename='netmiko_global.log', level=logging.DEBUG)
+#logger = logging.getLogger("netmiko")
+
 ## Connection method to devices ##
 
-user = '## DEFINE USER NAME HERE ##'
+user = '### PUT A USER NAME IN HERE ###'
 password = getpass('Password: ')
 
 with open('switch_hostnames_test.txt') as switches:
@@ -16,8 +23,11 @@ with open('switch_hostnames_test.txt') as switches:
             'device_type': 'hp_procurve',
             'host': hostname,
             'username': user,
-            'password': password
+            'password': password,
+            'global_delay_factor': 2,
         }
+
+        start_time = datetime.now()
 
         print("*** Connecting to", hostname, "***")
         net_connect = ConnectHandler(**Switch)
@@ -101,7 +111,7 @@ with open('switch_hostnames_test.txt') as switches:
             net_connect.config_mode()
             check_config_mode = net_connect.check_config_mode()
             send_command_disable_port = net_connect.send_command('interface ' + ap_port + ' disable')
-            print(send_command_disable_port)
+#            print(send_command_disable_port)
             print("*** Port", ap_port, "disabled ****")
 
         for remaining_port in remaining_int_down:
@@ -109,15 +119,14 @@ with open('switch_hostnames_test.txt') as switches:
             check_config_mode = net_connect.check_config_mode()
             send_command_dummy_vlan = net_connect.send_command('vlan 999 untagged ' + remaining_port)
             send_command_disable_port = net_connect.send_command('interface ' + remaining_port + ' disable')
-            print(send_command_dummy_vlan)
-            print(send_command_disable_port)
+#            print(send_command_dummy_vlan)
+#            print(send_command_disable_port)
             print("*** Port", remaining_port, "disabled & dummy VLAN applied ****")
 
 ## If ports are in disabled_ports and don't have VLAN 999 untagged, apply VLAN 999 untagged ##
 
         for interface in disabled_ports:
-            show_vlan_ports_detail = net_connect.send_command("show vlans ports " + str(interface) + " detail",
-                                                              use_textfsm=True, textfsm_template=template)
+            show_vlan_ports_detail = net_connect.send_command("show vlans ports " + str(interface) + " detail", use_textfsm=True, textfsm_template=template)
             for vlan_id in show_vlan_ports_detail:
                 if vlan_id['vlan_id'] != '999' and vlan_id['mode'] == 'Untagged':
                     net_connect.config_mode()
@@ -155,6 +164,9 @@ with open('switch_hostnames_test.txt') as switches:
                     set_vlan_untagged = net_connect.send_command("vlan 999 untagged " + str(interface))
                     print("*** Port", interface, "changed to VLAN 999 untagged ***")
 
-        print('*** Script on', hostname, 'has completed ***')
+        end_time = datetime.now()
 
-        net_connect.disconnect()
+        print('*** Script on', hostname, 'has completed ***',)
+        print('*** Total time: {} ***'.format(end_time - start_time))
+
+    net_connect.disconnect()
