@@ -1,0 +1,3240 @@
+DEBUG:paramiko.transport:starting thread (client mode): 0xcf6aea50
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_3.5.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_9.6
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_9.6)
+DEBUG:paramiko.transport:=== Key exchange possibilities ===
+DEBUG:paramiko.transport:kex algos: sntrup761x25519-sha512@openssh.com, curve25519-sha256, curve25519-sha256@libssh.org, diffie-hellman-group-exchange-sha256, diffie-hellman-group16-sha512, diffie-hellman-group18-sha512, kex-strict-s-v00@openssh.com
+DEBUG:paramiko.transport:server key: ssh-ed25519
+DEBUG:paramiko.transport:client encrypt: chacha20-poly1305@openssh.com, aes128-ctr, aes192-ctr, aes256-ctr, aes128-gcm@openssh.com, aes256-gcm@openssh.com
+DEBUG:paramiko.transport:server encrypt: chacha20-poly1305@openssh.com, aes128-ctr, aes192-ctr, aes256-ctr, aes128-gcm@openssh.com, aes256-gcm@openssh.com
+DEBUG:paramiko.transport:client mac: umac-128-etm@openssh.com, hmac-sha2-256-etm@openssh.com, hmac-sha2-512-etm@openssh.com
+DEBUG:paramiko.transport:server mac: umac-128-etm@openssh.com, hmac-sha2-256-etm@openssh.com, hmac-sha2-512-etm@openssh.com
+DEBUG:paramiko.transport:client compress: none, zlib@openssh.com
+DEBUG:paramiko.transport:server compress: none, zlib@openssh.com
+DEBUG:paramiko.transport:client lang: <none>
+DEBUG:paramiko.transport:server lang: <none>
+DEBUG:paramiko.transport:kex follows: False
+DEBUG:paramiko.transport:=== Key exchange agreements ===
+DEBUG:paramiko.transport:Strict kex mode: True
+DEBUG:paramiko.transport:Kex: diffie-hellman-group-exchange-sha256
+DEBUG:paramiko.transport:HostKey: ssh-ed25519
+DEBUG:paramiko.transport:Cipher: aes128-ctr
+DEBUG:paramiko.transport:MAC: hmac-sha2-256-etm@openssh.com
+DEBUG:paramiko.transport:Compression: none
+DEBUG:paramiko.transport:=== End of kex handshake ===
+DEBUG:paramiko.transport:Got server p (8192 bits)
+DEBUG:paramiko.transport:Resetting outbound seqno after NEWKEYS due to strict mode
+DEBUG:paramiko.transport:kex engine KexGexSHA256 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Resetting inbound seqno after NEWKEYS due to strict mode
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for 10.200.131.10: b'ac0932f38af92a8c0c2cfac9d1eb5c0a'
+DEBUG:paramiko.transport:Got EXT_INFO: {'server-sig-algs': b'ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256', 'publickey-hostbound@openssh.com': b'0', 'ping@openssh.com': b'0'}
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:Received global request "hostkeys-00@openssh.com"
+DEBUG:paramiko.transport:Rejecting "hostkeys-00@openssh.com" global request from server.
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: EF-NDC-MSW-01 # 
+DEBUG:netmiko:Pattern found: (to accept|[#$]) EF-NDC-MSW-01 #
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+EF-NDC-MSW-01 # 
+DEBUG:netmiko:Pattern found: ([#$]) 
+EF-NDC-MSW-01 #
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is EF-NDC-MSW-01 #
+DEBUG:netmiko:write_channel: b'get system status | grep Virtual\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: get system status | grep Virtual
+
+DEBUG:netmiko:Pattern found: (get\ system\ status\ \|\ grep\ Virtual) get system status | grep Virtual
+DEBUG:netmiko:read_channel: 
+EF-NDC-MSW-01 # 
+DEBUG:netmiko:write_channel: b'get system status | grep Version\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: get syste
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: m status | grep Version
+Version: FortiSwitch-124F v7.2.8,build0495,240524 (GA)
+
+EF-NDC-MSW-01 # 
+DEBUG:netmiko:Pattern found: (get\ system\ status\ \|\ grep\ Version) get system status | grep Version
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'get system console\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: get system console
+baudrate            : 115200
+hostname-display-length: 17
+login               : enable 
+mode                : line 
+output              : more 
+
+DEBUG:netmiko:Pattern found: (get\ system\ console) get system console
+DEBUG:netmiko:read_channel: 
+EF-NDC-MSW-01 # 
+DEBUG:netmiko:write_channel: b'config system console\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: config system console
+
+EF-NDC-MSW-01 (console) # 
+DEBUG:netmiko:Pattern found: (config\ system\ console) config system console
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'set output standard\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: se
+DEBUG:netmiko:read_channel: t output standard
+
+EF-NDC-MSW-01 (console) # 
+DEBUG:netmiko:Pattern found: (set\ output\ standard) set output standard
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: end
+
+DEBUG:netmiko:Pattern found: (end) end
+DEBUG:netmiko:read_channel: 
+EF-NDC-MSW-01 # 
+DEBUG:netmiko:write_channel: b'config user group\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: config user group
+
+EF-NDC-MSW-01 (group) # 
+DEBUG:netmiko:Pattern found: (config\ user\ group) config user group
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (group) # 
+DEBUG:netmiko:write_channel: b'edit "Network-Switch Operators"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: edit "Network-Switch Operators"
+new entry 'Network-Switch Operators' added
+
+EF-NDC-MSW-01 (Network-Switch ~p) # 
+DEBUG:netmiko:Pattern found: (edit\ "Network\-Switch\ Operators") edit "Network-Switch Operators"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+new entry 'Network-Switch Operators' added
+
+EF-NDC-MSW-01 (Network-Switch ~p) # 
+DEBUG:netmiko:write_channel: b'set group-type firewall\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set group-type firewall
+
+EF-NDC-MSW-01 (Network-Switch ~p) # 
+DEBUG:netmiko:Pattern found: (set\ group\-type\ firewall) set group-type firewall
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (Network-Switch ~p) # 
+DEBUG:netmiko:write_channel: b'set authtimeout 0\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set authtimeout 0
+
+EF-NDC-MSW-01 (Network-Switch ~p) # 
+DEBUG:netmiko:Pattern found: (set\ authtimeout\ 0) set authtimeout 0
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (Network-Switch ~p) # 
+DEBUG:netmiko:write_channel: b'set member "RADIUS_Servers"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set member "RADIUS_Servers"
+
+EF-NDC-MSW-01 (Network-Switch ~p) # 
+DEBUG:netmiko:Pattern found: (set\ member\ "RADIUS_Servers") set member "RADIUS_Servers"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (Network-Switch ~p) # 
+DEBUG:netmiko:write_channel: b'next\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: next
+
+EF-NDC-MSW-01 (group) # 
+DEBUG:netmiko:Pattern found: (next) next
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (group) # 
+DEBUG:netmiko:write_channel: b'edit "Network-Switch Admins"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: edit "Network-Switch Admins"
+new entry 'Network-Switch Admins' added
+
+EF-NDC-MSW-01 (Network-Switch ~d) # 
+DEBUG:netmiko:Pattern found: (edit\ "Network\-Switch\ Admins") edit "Network-Switch Admins"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+new entry 'Network-Switch Admins' added
+
+EF-NDC-MSW-01 (Network-Switch ~d) # 
+DEBUG:netmiko:write_channel: b'set group-type firewall\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set group-type firewall
+
+EF-NDC-MSW-01 (Network-Switch ~d) # 
+DEBUG:netmiko:Pattern found: (set\ group\-type\ firewall) set group-type firewall
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (Network-Switch ~d) # 
+DEBUG:netmiko:write_channel: b'set authtimeout 0\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set authtimeout 0
+
+EF-NDC-MSW-01 (Network-Switch ~d) # 
+DEBUG:netmiko:Pattern found: (set\ authtimeout\ 0) set authtimeout 0
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (Network-Switch ~d) # 
+DEBUG:netmiko:write_channel: b'set member "RADIUS_Servers"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set member "RADIUS_Servers"
+
+EF-NDC-MSW-01 (Network-Switch ~d) # 
+DEBUG:netmiko:Pattern found: (set\ member\ "RADIUS_Servers") set member "RADIUS_Servers"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (Network-Switch ~d) # 
+DEBUG:netmiko:write_channel: b'next\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: next
+
+EF-NDC-MSW-01 (group) # 
+DEBUG:netmiko:Pattern found: (next) next
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (group) # 
+DEBUG:netmiko:write_channel: b'edit "Network-Backup Admins"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: edit "Network-Backup Admins"
+new entry 'Network-Backup Admins' added
+
+EF-NDC-MSW-01 (Network-Backup ~d) # 
+DEBUG:netmiko:Pattern found: (edit\ "Network\-Backup\ Admins") edit "Network-Backup Admins"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+new entry 'Network-Backup Admins' added
+
+EF-NDC-MSW-01 (Network-Backup ~d) # 
+DEBUG:netmiko:write_channel: b'set group-type firewall\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set group-type firewall
+
+EF-NDC-MSW-01 (Network-Backup ~d) # 
+DEBUG:netmiko:Pattern found: (set\ group\-type\ firewall) set group-type firewall
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (Network-Backup ~d) # 
+DEBUG:netmiko:write_channel: b'set authtimeout 0\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set authtimeout 0
+
+EF-NDC-MSW-01 (Network-Backup ~d) # 
+DEBUG:netmiko:Pattern found: (set\ authtimeout\ 0) set authtimeout 0
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (Network-Backup ~d) # 
+DEBUG:netmiko:write_channel: b'set member "RADIUS_Servers"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set member "RADIUS_Servers"
+
+EF-NDC-MSW-01 (Network-Backup ~d) # 
+DEBUG:netmiko:Pattern found: (set\ member\ "RADIUS_Servers") set member "RADIUS_Servers"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (Network-Backup ~d) # 
+DEBUG:netmiko:write_channel: b'next\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: next
+
+EF-NDC-MSW-01 (group) # 
+DEBUG:netmiko:Pattern found: (next) next
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (group) # 
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: end
+
+EF-NDC-MSW-01 # 
+DEBUG:netmiko:Pattern found: (end) end
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 # 
+DEBUG:netmiko:write_channel: b'config system accprofile\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: config system accprofile
+
+EF-NDC-MSW-01 (accprofile) # 
+DEBUG:netmiko:Pattern found: (config\ system\ accprofile) config system accprofile
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (accprofile) # 
+DEBUG:netmiko:write_channel: b'edit "backup_admin"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: edit "backup_admin"
+new entry 'backup_admin' added
+
+EF-NDC-MSW-01 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (edit\ "backup_admin") edit "backup_admin"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+new entry 'backup_admin' added
+
+EF-NDC-MSW-01 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'set admingrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set admingrp read
+
+EF-NDC-MSW-01 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (set\ admingrp\ read) set admingrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'set exec-alias-grp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set exec-alias-grp read
+
+EF-NDC-MSW-01 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (set\ exec\-alias\-grp\ read) set exec-alias-grp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'set loggrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set loggrp read
+
+EF-NDC-MSW-01 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (set\ loggrp\ read) set loggrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'set mntgrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set mntgrp read
+
+EF-NDC-MSW-01 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (set\ mntgrp\ read) set mntgrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'set netgrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set netgrp read
+
+EF-NDC-MSW-01 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (set\ netgrp\ read) set netgrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'set pktmongrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set pktmongrp read
+
+EF-NDC-MSW-01 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (set\ pktmongrp\ read) set pktmongrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'set routegrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set routegrp read
+
+EF-NDC-MSW-01 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (set\ routegrp\ read) set routegrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'set swcoregrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set swcoregrp read
+
+EF-NDC-MSW-01 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (set\ swcoregrp\ read) set swcoregrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'set swmonguardgrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set swmonguardgrp read
+
+EF-NDC-MSW-01 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (set\ swmonguardgrp\ read) set swmonguardgrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'set sysgrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set sysgrp read
+
+EF-NDC-MSW-01 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (set\ sysgrp\ read) set sysgrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'set utilgrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set utilgrp read
+
+EF-NDC-MSW-01 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (set\ utilgrp\ read) set utilgrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'next\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: next
+
+EF-NDC-MSW-01 (accprofile) # 
+DEBUG:netmiko:Pattern found: (next) next
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (accprofile) # 
+DEBUG:netmiko:write_channel: b'edit "read_only_operator"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: edit "read_only_operator"
+new entry 'read_only_operator' added
+
+EF-NDC-MSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (edit\ "read_only_operator") edit "read_only_operator"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+new entry 'read_only_operator' added
+
+EF-NDC-MSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'set admingrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set admingrp read
+
+EF-NDC-MSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (set\ admingrp\ read) set admingrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'set exec-alias-grp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set exec-alias-grp read
+
+EF-NDC-MSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (set\ exec\-alias\-grp\ read) set exec-alias-grp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'set loggrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set loggrp read
+
+EF-NDC-MSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (set\ loggrp\ read) set loggrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'set mntgrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set mntgrp read
+
+EF-NDC-MSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (set\ mntgrp\ read) set mntgrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'set netgrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set netgrp read
+
+EF-NDC-MSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (set\ netgrp\ read) set netgrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'set pktmongrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set pktmongrp read
+
+EF-NDC-MSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (set\ pktmongrp\ read) set pktmongrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'set routegrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set routegrp read
+
+EF-NDC-MSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (set\ routegrp\ read) set routegrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'set swcoregrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set swcoregrp read
+
+EF-NDC-MSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (set\ swcoregrp\ read) set swcoregrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'set swmonguardgrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set swmonguardgrp read
+
+EF-NDC-MSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (set\ swmonguardgrp\ read) set swmonguardgrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'set sysgrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set sysgrp read
+
+EF-NDC-MSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (set\ sysgrp\ read) set sysgrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'set utilgrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set utilgrp read
+
+EF-NDC-MSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (set\ utilgrp\ read) set utilgrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'next\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: next
+
+EF-NDC-MSW-01 (accprofile) # 
+DEBUG:netmiko:Pattern found: (next) next
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (accprofile) # 
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: end
+
+EF-NDC-MSW-01 # 
+DEBUG:netmiko:Pattern found: (end) end
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 # 
+DEBUG:netmiko:write_channel: b'config system admin\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: config system admin
+
+EF-NDC-MSW-01 (admin) # 
+DEBUG:netmiko:Pattern found: (config\ system\ admin) config system admin
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (admin) # 
+DEBUG:netmiko:write_channel: b'edit "RADIUS_Admins"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: edit "RADIUS_Admins"
+
+EF-NDC-MSW-01 (RADIUS_Admins) # 
+DEBUG:netmiko:Pattern found: (edit\ "RADIUS_Admins") edit "RADIUS_Admins"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (RADIUS_Admins) # 
+DEBUG:netmiko:write_channel: b'set remote-auth enable\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set remote-au
+DEBUG:netmiko:read_channel: th enable
+
+EF-NDC-MSW-01 (RADIUS_Admins) # 
+DEBUG:netmiko:Pattern found: (set\ remote\-auth\ enable) set remote-auth enable
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (RADIUS_Admins) # 
+DEBUG:netmiko:write_channel: b'set accprofile "super_admin"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set accprofile "super_admin"
+
+EF-NDC-MSW-01 (RADIUS_Admins) # 
+DEBUG:netmiko:Pattern found: (set\ accprofile\ "super_admin") set accprofile "super_admin"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (RADIUS_Admins) # 
+DEBUG:netmiko:write_channel: b'set wildcard enable\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set wildcard enable
+
+EF-NDC-MSW-01 (RADIUS_Admins) # 
+DEBUG:netmiko:Pattern found: (set\ wildcard\ enable) set wildcard enable
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (RADIUS_Admins) # 
+DEBUG:netmiko:write_channel: b'set remote-group "Network-Switch Admins"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set remote-group "Network-Switch Admins"
+
+EF-NDC-MSW-01 (RADIUS_Admins) # 
+DEBUG:netmiko:Pattern found: (set\ remote\-group\ "Network\-Switch\ Admins") set remote-group "Network-Switch Admins"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (RADIUS_Admins) # 
+DEBUG:netmiko:write_channel: b'set accprofile-override enable\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set accprofile-override enable
+
+EF-NDC-MSW-01 (RADIUS_Admins) # 
+DEBUG:netmiko:Pattern found: (set\ accprofile\-override\ enable) set accprofile-override enable
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (RADIUS_Admins) # 
+DEBUG:netmiko:write_channel: b'next\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: next
+
+EF-NDC-MSW-01 (admin) # 
+DEBUG:netmiko:Pattern found: (next) next
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (admin) # 
+DEBUG:netmiko:write_channel: b'edit "RADIUS_Operators"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: edit "RADIUS_Operators"
+new entry 'RADIUS_Operators' added
+
+EF-NDC-MSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:Pattern found: (edit\ "RADIUS_Operators") edit "RADIUS_Operators"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+new entry 'RADIUS_Operators' added
+
+EF-NDC-MSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:write_channel: b'set remote-auth enable\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set remote-auth enable
+
+EF-NDC-MSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:Pattern found: (set\ remote\-auth\ enable) set remote-auth enable
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:write_channel: b'set trusthost1 10.255.2.0 255.255.255.0\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set trusthost1 10.255.2.0 255.255.255.0
+
+EF-NDC-MSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:Pattern found: (set\ trusthost1\ 10\.255\.2\.0\ 255\.255\.255\.0) set trusthost1 10.255.2.0 255.255.255.0
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:write_channel: b'set trusthost2 10.200.0.0 255.255.255.0\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set trusthost2 10.200.0.0 255.255.255.0
+
+EF-NDC-MSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:Pattern found: (set\ trusthost2\ 10\.200\.0\.0\ 255\.255\.255\.0) set trusthost2 10.200.0.0 255.255.255.0
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:write_channel: b'set trusthost3 10.200.128.0 255.255.255.0\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set trusthost3 10.200.128.0 255.255.255.0
+
+EF-NDC-MSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:Pattern found: (set\ trusthost3\ 10\.200\.128\.0\ 255\.255\.255\.0) set trusthost3 10.200.128.0 255.255.255.0
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:write_channel: b'set accprofile "read_only_operator"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set accprofile "read_only_operator"
+
+
+DEBUG:netmiko:Pattern found: (set\ accprofile\ "read_only_operator") set accprofile "read_only_operator"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: EF-NDC-MSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:write_channel: b'set wildcard enable\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set wildcard enable
+
+EF-NDC-MSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:Pattern found: (set\ wildcard\ enable) set wildcard enable
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:write_channel: b'set remote-group "Network-Switch Operators"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set remote-group "Network-Switch Operators"
+
+EF-NDC-MSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:Pattern found: (set\ remote\-group\ "Network\-Switch\ Operators") set remote-group "Network-Switch Operators"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:write_channel: b'set accprofile-override enable\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set accprofile-override enable
+
+EF-NDC-MSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:Pattern found: (set\ accprofile\-override\ enable) set accprofile-override enable
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:write_channel: b'next\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: next
+
+EF-NDC-MSW-01 (admin) # 
+DEBUG:netmiko:Pattern found: (next) next
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (admin) # 
+DEBUG:netmiko:write_channel: b'edit "RADIUS_Backup_Admins"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: edit "RADIUS_Backup_Admins"
+new entry 'RADIUS_Backup_Admins' added
+
+EF-NDC-MSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:Pattern found: (edit\ "RADIUS_Backup_Admins") edit "RADIUS_Backup_Admins"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+new entry 'RADIUS_Backup_Admins' added
+
+EF-NDC-MSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:write_channel: b'set remote-auth enable\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set remote-auth enable
+
+EF-NDC-MSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:Pattern found: (set\ remote\-auth\ enable) set remote-auth enable
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:write_channel: b'set trusthost1 172.28.0.13 255.255.255.255\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set trusthost1 172.28.0.13 255.255.255.255
+
+EF-NDC-MSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:Pattern found: (set\ trusthost1\ 172\.28\.0\.13\ 255\.255\.255\.255) set trusthost1 172.28.0.13 255.255.255.255
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:write_channel: b'set trusthost2 172.28.128.13 255.255.255.255\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set trusthost2 172.28.128.13 255.255.255.255
+
+EF-NDC-MSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:Pattern found: (set\ trusthost2\ 172\.28\.128\.13\ 255\.255\.255\.255) set trusthost2 172.28.128.13 255.255.255.255
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:write_channel: b'set trusthost3 10.200.0.0 255.255.255.0\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set trusthost3 10.200.0.0 255.255.255.0
+
+EF-NDC-MSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:Pattern found: (set\ trusthost3\ 10\.200\.0\.0\ 255\.255\.255\.0) set trusthost3 10.200.0.0 255.255.255.0
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:write_channel: b'set trusthost4 10.200.128.0 255.255.255.0\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set trusthost4 10.200.128.0 255.255.255.0
+
+EF-NDC-MSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:Pattern found: (set\ trusthost4\ 10\.200\.128\.0\ 255\.255\.255\.0) set trusthost4 10.200.128.0 255.255.255.0
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:write_channel: b'set accprofile "backup_admin"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set accprofile "backup_admin"
+
+EF-NDC-MSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:Pattern found: (set\ accprofile\ "backup_admin") set accprofile "backup_admin"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:write_channel: b'set wildcard enable\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set wildcard enable
+
+EF-NDC-MSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:Pattern found: (set\ wildcard\ enable) set wildcard enable
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:write_channel: b'set remote-group "Network-Backup Admins"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set remote-group "Network-Backup Admins"
+
+EF-NDC-MSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:Pattern found: (set\ remote\-group\ "Network\-Backup\ Admins") set remote-group "Network-Backup Admins"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:write_channel: b'set accprofile-override enable\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set accprofile-override enable
+
+EF-NDC-MSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:Pattern found: (set\ accprofile\-override\ enable) set accprofile-override enable
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:write_channel: b'next\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: next
+
+DEBUG:netmiko:Pattern found: (next) next
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+EF-NDC-MSW-01 (admin) # 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 (admin) # 
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: end
+
+EF-NDC-MSW-01 # 
+DEBUG:netmiko:Pattern found: (end) end
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-MSW\-01\ .*$|#.*$)) 
+
+EF-NDC-MSW-01 # 
+DEBUG:netmiko:config user group
+
+EF-NDC-MSW-01 (group) # edit "Network-Switch Operators"
+new entry 'Network-Switch Operators' added
+
+EF-NDC-MSW-01 (Network-Switch ~p) # set group-type firewall
+
+EF-NDC-MSW-01 (Network-Switch ~p) # set authtimeout 0
+
+EF-NDC-MSW-01 (Network-Switch ~p) # set member "RADIUS_Servers"
+
+EF-NDC-MSW-01 (Network-Switch ~p) # next
+
+EF-NDC-MSW-01 (group) # edit "Network-Switch Admins"
+new entry 'Network-Switch Admins' added
+
+EF-NDC-MSW-01 (Network-Switch ~d) # set group-type firewall
+
+EF-NDC-MSW-01 (Network-Switch ~d) # set authtimeout 0
+
+EF-NDC-MSW-01 (Network-Switch ~d) # set member "RADIUS_Servers"
+
+EF-NDC-MSW-01 (Network-Switch ~d) # next
+
+EF-NDC-MSW-01 (group) # edit "Network-Backup Admins"
+new entry 'Network-Backup Admins' added
+
+EF-NDC-MSW-01 (Network-Backup ~d) # set group-type firewall
+
+EF-NDC-MSW-01 (Network-Backup ~d) # set authtimeout 0
+
+EF-NDC-MSW-01 (Network-Backup ~d) # set member "RADIUS_Servers"
+
+EF-NDC-MSW-01 (Network-Backup ~d) # next
+
+EF-NDC-MSW-01 (group) # end
+
+EF-NDC-MSW-01 # config system accprofile
+
+EF-NDC-MSW-01 (accprofile) # edit "backup_admin"
+new entry 'backup_admin' added
+
+EF-NDC-MSW-01 (backup_admin) # set admingrp read
+
+EF-NDC-MSW-01 (backup_admin) # set exec-alias-grp read
+
+EF-NDC-MSW-01 (backup_admin) # set loggrp read
+
+EF-NDC-MSW-01 (backup_admin) # set mntgrp read
+
+EF-NDC-MSW-01 (backup_admin) # set netgrp read
+
+EF-NDC-MSW-01 (backup_admin) # set pktmongrp read
+
+EF-NDC-MSW-01 (backup_admin) # set routegrp read
+
+EF-NDC-MSW-01 (backup_admin) # set swcoregrp read
+
+EF-NDC-MSW-01 (backup_admin) # set swmonguardgrp read
+
+EF-NDC-MSW-01 (backup_admin) # set sysgrp read
+
+EF-NDC-MSW-01 (backup_admin) # set utilgrp read
+
+EF-NDC-MSW-01 (backup_admin) # next
+
+EF-NDC-MSW-01 (accprofile) # edit "read_only_operator"
+new entry 'read_only_operator' added
+
+EF-NDC-MSW-01 (read_only_opera~o) # set admingrp read
+
+EF-NDC-MSW-01 (read_only_opera~o) # set exec-alias-grp read
+
+EF-NDC-MSW-01 (read_only_opera~o) # set loggrp read
+
+EF-NDC-MSW-01 (read_only_opera~o) # set mntgrp read
+
+EF-NDC-MSW-01 (read_only_opera~o) # set netgrp read
+
+EF-NDC-MSW-01 (read_only_opera~o) # set pktmongrp read
+
+EF-NDC-MSW-01 (read_only_opera~o) # set routegrp read
+
+EF-NDC-MSW-01 (read_only_opera~o) # set swcoregrp read
+
+EF-NDC-MSW-01 (read_only_opera~o) # set swmonguardgrp read
+
+EF-NDC-MSW-01 (read_only_opera~o) # set sysgrp read
+
+EF-NDC-MSW-01 (read_only_opera~o) # set utilgrp read
+
+EF-NDC-MSW-01 (read_only_opera~o) # next
+
+EF-NDC-MSW-01 (accprofile) # end
+
+EF-NDC-MSW-01 # config system admin
+
+EF-NDC-MSW-01 (admin) # edit "RADIUS_Admins"
+
+EF-NDC-MSW-01 (RADIUS_Admins) # set remote-auth enable
+
+EF-NDC-MSW-01 (RADIUS_Admins) # set accprofile "super_admin"
+
+EF-NDC-MSW-01 (RADIUS_Admins) # set wildcard enable
+
+EF-NDC-MSW-01 (RADIUS_Admins) # set remote-group "Network-Switch Admins"
+
+EF-NDC-MSW-01 (RADIUS_Admins) # set accprofile-override enable
+
+EF-NDC-MSW-01 (RADIUS_Admins) # next
+
+EF-NDC-MSW-01 (admin) # edit "RADIUS_Operators"
+new entry 'RADIUS_Operators' added
+
+EF-NDC-MSW-01 (RADIUS_Operators) # set remote-auth enable
+
+EF-NDC-MSW-01 (RADIUS_Operators) # set trusthost1 10.255.2.0 255.255.255.0
+
+EF-NDC-MSW-01 (RADIUS_Operators) # set trusthost2 10.200.0.0 255.255.255.0
+
+EF-NDC-MSW-01 (RADIUS_Operators) # set trusthost3 10.200.128.0 255.255.255.0
+
+EF-NDC-MSW-01 (RADIUS_Operators) # set accprofile "read_only_operator"
+
+EF-NDC-MSW-01 (RADIUS_Operators) # set wildcard enable
+
+EF-NDC-MSW-01 (RADIUS_Operators) # set remote-group "Network-Switch Operators"
+
+EF-NDC-MSW-01 (RADIUS_Operators) # set accprofile-override enable
+
+EF-NDC-MSW-01 (RADIUS_Operators) # next
+
+EF-NDC-MSW-01 (admin) # edit "RADIUS_Backup_Admins"
+new entry 'RADIUS_Backup_Admins' added
+
+EF-NDC-MSW-01 (RADIUS_Backup_A~m) # set remote-auth enable
+
+EF-NDC-MSW-01 (RADIUS_Backup_A~m) # set trusthost1 172.28.0.13 255.255.255.255
+
+EF-NDC-MSW-01 (RADIUS_Backup_A~m) # set trusthost2 172.28.128.13 255.255.255.255
+
+EF-NDC-MSW-01 (RADIUS_Backup_A~m) # set trusthost3 10.200.0.0 255.255.255.0
+
+EF-NDC-MSW-01 (RADIUS_Backup_A~m) # set trusthost4 10.200.128.0 255.255.255.0
+
+EF-NDC-MSW-01 (RADIUS_Backup_A~m) # set accprofile "backup_admin"
+
+EF-NDC-MSW-01 (RADIUS_Backup_A~m) # set wildcard enable
+
+EF-NDC-MSW-01 (RADIUS_Backup_A~m) # set remote-group "Network-Backup Admins"
+
+EF-NDC-MSW-01 (RADIUS_Backup_A~m) # set accprofile-override enable
+
+EF-NDC-MSW-01 (RADIUS_Backup_A~m) # next
+
+EF-NDC-MSW-01 (admin) # end
+
+EF-NDC-MSW-01 # 
+DEBUG:netmiko:write_channel: b'config system console\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: config system console
+
+EF-NDC-MSW-01 (console) # 
+DEBUG:netmiko:Pattern found: (config\ system\ console) config system console
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'set output more\n'
+DEBUG:netmiko:read_channel: set 
+DEBUG:netmiko:read_channel: output more
+
+EF-NDC-MSW-01 (console) # 
+DEBUG:netmiko:Pattern found: (set\ output\ more) set output more
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: end
+
+EF-NDC-MSW-01 # 
+DEBUG:netmiko:Pattern found: (end) end
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'exit\n'
+DEBUG:paramiko.transport:EOF in transport thread
+DEBUG:paramiko.transport:starting thread (client mode): 0xcf6774d0
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_3.5.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_9.6
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_9.6)
+DEBUG:paramiko.transport:=== Key exchange possibilities ===
+DEBUG:paramiko.transport:kex algos: sntrup761x25519-sha512@openssh.com, curve25519-sha256, curve25519-sha256@libssh.org, diffie-hellman-group-exchange-sha256, diffie-hellman-group16-sha512, diffie-hellman-group18-sha512, kex-strict-s-v00@openssh.com
+DEBUG:paramiko.transport:server key: ssh-ed25519
+DEBUG:paramiko.transport:client encrypt: chacha20-poly1305@openssh.com, aes128-ctr, aes192-ctr, aes256-ctr, aes128-gcm@openssh.com, aes256-gcm@openssh.com
+DEBUG:paramiko.transport:server encrypt: chacha20-poly1305@openssh.com, aes128-ctr, aes192-ctr, aes256-ctr, aes128-gcm@openssh.com, aes256-gcm@openssh.com
+DEBUG:paramiko.transport:client mac: umac-128-etm@openssh.com, hmac-sha2-256-etm@openssh.com, hmac-sha2-512-etm@openssh.com
+DEBUG:paramiko.transport:server mac: umac-128-etm@openssh.com, hmac-sha2-256-etm@openssh.com, hmac-sha2-512-etm@openssh.com
+DEBUG:paramiko.transport:client compress: none, zlib@openssh.com
+DEBUG:paramiko.transport:server compress: none, zlib@openssh.com
+DEBUG:paramiko.transport:client lang: <none>
+DEBUG:paramiko.transport:server lang: <none>
+DEBUG:paramiko.transport:kex follows: False
+DEBUG:paramiko.transport:=== Key exchange agreements ===
+DEBUG:paramiko.transport:Strict kex mode: True
+DEBUG:paramiko.transport:Kex: diffie-hellman-group-exchange-sha256
+DEBUG:paramiko.transport:HostKey: ssh-ed25519
+DEBUG:paramiko.transport:Cipher: aes128-ctr
+DEBUG:paramiko.transport:MAC: hmac-sha2-256-etm@openssh.com
+DEBUG:paramiko.transport:Compression: none
+DEBUG:paramiko.transport:=== End of kex handshake ===
+DEBUG:paramiko.transport:Got server p (8192 bits)
+DEBUG:paramiko.transport:Resetting outbound seqno after NEWKEYS due to strict mode
+DEBUG:paramiko.transport:kex engine KexGexSHA256 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Resetting inbound seqno after NEWKEYS due to strict mode
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for 10.200.131.11: b'98ee93df36401af615a4acb9bff61e73'
+DEBUG:paramiko.transport:Got EXT_INFO: {'server-sig-algs': b'ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256', 'publickey-hostbound@openssh.com': b'0', 'ping@openssh.com': b'0'}
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:Received global request "hostkeys-00@openssh.com"
+DEBUG:paramiko.transport:Rejecting "hostkeys-00@openssh.com" global request from server.
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: EF-NDC-SSW-01 # 
+DEBUG:netmiko:Pattern found: (to accept|[#$]) EF-NDC-SSW-01 #
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+EF-NDC-SSW-01 # 
+DEBUG:netmiko:Pattern found: ([#$]) 
+EF-NDC-SSW-01 #
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is EF-NDC-SSW-01 #
+DEBUG:netmiko:write_channel: b'get system status | grep Virtual\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: get system status | grep Virtual
+
+DEBUG:netmiko:Pattern found: (get\ system\ status\ \|\ grep\ Virtual) get system status | grep Virtual
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+EF-NDC-SSW-01 # 
+DEBUG:netmiko:write_channel: b'get system status | grep Version\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: get system status | grep Version
+Version: FortiSwitch-2048F v7.2.8,build0495,240524 (GA)
+
+DEBUG:netmiko:Pattern found: (get\ system\ status\ \|\ grep\ Version) get system status | grep Version
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+EF-NDC-SSW-01 # 
+DEBUG:netmiko:write_channel: b'get system console\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: get system console
+
+DEBUG:netmiko:Pattern found: (get\ system\ console) get system console
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: baudrate            : 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 115200
+hostname-display-length: 17
+login               : enable 
+mode                : line 
+output              : more 
+
+EF-NDC-SSW-01 # 
+DEBUG:netmiko:write_channel: b'config system console\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: config system console
+
+DEBUG:netmiko:Pattern found: (config\ system\ console) config system console
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+EF-NDC-SSW-01 (console) # 
+DEBUG:netmiko:write_channel: b'set output standard\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set output standard
+
+DEBUG:netmiko:Pattern found: (set\ output\ standard) set output standard
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+EF-NDC-SSW-01 (console) # 
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: end
+
+DEBUG:netmiko:Pattern found: (end) end
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+EF-NDC-SSW-01 # 
+DEBUG:netmiko:write_channel: b'config user group\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: config user group
+
+EF-NDC-SSW-01 (group) # 
+DEBUG:netmiko:Pattern found: (config\ user\ group) config user group
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (group) # 
+DEBUG:netmiko:write_channel: b'edit "Network-Switch Operators"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: edit "Network-Switch Operators"
+new entry 'Network-Switch Operators' added
+
+EF-NDC-SSW-01 (Network-Switch ~p) # 
+DEBUG:netmiko:Pattern found: (edit\ "Network\-Switch\ Operators") edit "Network-Switch Operators"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+new entry 'Network-Switch Operators' added
+
+EF-NDC-SSW-01 (Network-Switch ~p) # 
+DEBUG:netmiko:write_channel: b'set group-type firewall\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set group-type firewall
+
+EF-NDC-SSW-01 (Network-Switch ~p) # 
+DEBUG:netmiko:Pattern found: (set\ group\-type\ firewall) set group-type firewall
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (Network-Switch ~p) # 
+DEBUG:netmiko:write_channel: b'set authtimeout 0\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set authtimeout 0
+
+EF-NDC-SSW-01 (Network-Switch ~p) # 
+DEBUG:netmiko:Pattern found: (set\ authtimeout\ 0) set authtimeout 0
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (Network-Switch ~p) # 
+DEBUG:netmiko:write_channel: b'set member "RADIUS_Servers"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set member "RADIUS_Servers"
+
+EF-NDC-SSW-01 (Network-Switch ~p) # 
+DEBUG:netmiko:Pattern found: (set\ member\ "RADIUS_Servers") set member "RADIUS_Servers"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (Network-Switch ~p) # 
+DEBUG:netmiko:write_channel: b'next\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: next
+
+EF-NDC-SSW-01 (group) # 
+DEBUG:netmiko:Pattern found: (next) next
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (group) # 
+DEBUG:netmiko:write_channel: b'edit "Network-Switch Admins"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: edit "Network-Switch Admins"
+new entry 'Network-Switch Admins' added
+
+EF-NDC-SSW-01 (Network-Switch ~d) # 
+DEBUG:netmiko:Pattern found: (edit\ "Network\-Switch\ Admins") edit "Network-Switch Admins"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+new entry 'Network-Switch Admins' added
+
+EF-NDC-SSW-01 (Network-Switch ~d) # 
+DEBUG:netmiko:write_channel: b'set group-type firewall\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set group-type firewall
+
+EF-NDC-SSW-01 (Network-Switch ~d) # 
+DEBUG:netmiko:Pattern found: (set\ group\-type\ firewall) set group-type firewall
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (Network-Switch ~d) # 
+DEBUG:netmiko:write_channel: b'set authtimeout 0\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set authtimeout 0
+
+EF-NDC-SSW-01 (Network-Switch ~d) # 
+DEBUG:netmiko:Pattern found: (set\ authtimeout\ 0) set authtimeout 0
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (Network-Switch ~d) # 
+DEBUG:netmiko:write_channel: b'set member "RADIUS_Servers"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set member "RADIUS_Servers"
+
+EF-NDC-SSW-01 (Network-Switch ~d) # 
+DEBUG:netmiko:Pattern found: (set\ member\ "RADIUS_Servers") set member "RADIUS_Servers"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (Network-Switch ~d) # 
+DEBUG:netmiko:write_channel: b'next\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: next
+
+EF-NDC-SSW-01 (group) # 
+DEBUG:netmiko:Pattern found: (next) next
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (group) # 
+DEBUG:netmiko:write_channel: b'edit "Network-Backup Admins"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: edit "Network-Backup Admins"
+new entry 'Network-Backup Admins' added
+
+EF-NDC-SSW-01 (Network-Backup ~d) # 
+DEBUG:netmiko:Pattern found: (edit\ "Network\-Backup\ Admins") edit "Network-Backup Admins"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+new entry 'Network-Backup Admins' added
+
+EF-NDC-SSW-01 (Network-Backup ~d) # 
+DEBUG:netmiko:write_channel: b'set group-type firewall\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set group-type firewall
+
+EF-NDC-SSW-01 (Network-Backup ~d) # 
+DEBUG:netmiko:Pattern found: (set\ group\-type\ firewall) set group-type firewall
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (Network-Backup ~d) # 
+DEBUG:netmiko:write_channel: b'set authtimeout 0\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set authtimeout 0
+
+EF-NDC-SSW-01 (Network-Backup ~d) # 
+DEBUG:netmiko:Pattern found: (set\ authtimeout\ 0) set authtimeout 0
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (Network-Backup ~d) # 
+DEBUG:netmiko:write_channel: b'set member "RADIUS_Servers"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set member "RADIUS_Servers"
+
+EF-NDC-SSW-01 (Network-Backup ~d) # 
+DEBUG:netmiko:Pattern found: (set\ member\ "RADIUS_Servers") set member "RADIUS_Servers"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (Network-Backup ~d) # 
+DEBUG:netmiko:write_channel: b'next\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: next
+
+EF-NDC-SSW-01 (group) # 
+DEBUG:netmiko:Pattern found: (next) next
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (group) # 
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: end
+
+EF-NDC-SSW-01 # 
+DEBUG:netmiko:Pattern found: (end) end
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 # 
+DEBUG:netmiko:write_channel: b'config system accprofile\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: config system accprofile
+
+EF-NDC-SSW-01 (accprofile) # 
+DEBUG:netmiko:Pattern found: (config\ system\ accprofile) config system accprofile
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (accprofile) # 
+DEBUG:netmiko:write_channel: b'edit "backup_admin"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: edit "backup_admin"
+new entry 'backup_admin' added
+
+EF-NDC-SSW-01 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (edit\ "backup_admin") edit "backup_admin"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+new entry 'backup_admin' added
+
+EF-NDC-SSW-01 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'set admingrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set admingrp read
+
+EF-NDC-SSW-01 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (set\ admingrp\ read) set admingrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'set exec-alias-grp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set exec-alias-grp read
+
+EF-NDC-SSW-01 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (set\ exec\-alias\-grp\ read) set exec-alias-grp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'set loggrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set loggrp read
+
+EF-NDC-SSW-01 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (set\ loggrp\ read) set loggrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'set mntgrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set mntgrp read
+
+EF-NDC-SSW-01 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (set\ mntgrp\ read) set mntgrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'set netgrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set netgrp read
+
+EF-NDC-SSW-01 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (set\ netgrp\ read) set netgrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'set pktmongrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set pktmongrp read
+
+EF-NDC-SSW-01 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (set\ pktmongrp\ read) set pktmongrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'set routegrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set routegrp read
+
+EF-NDC-SSW-01 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (set\ routegrp\ read) set routegrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'set swcoregrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set swcoregrp read
+
+EF-NDC-SSW-01 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (set\ swcoregrp\ read) set swcoregrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'set swmonguardgrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set swmonguardgrp read
+
+EF-NDC-SSW-01 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (set\ swmonguardgrp\ read) set swmonguardgrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'set sysgrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set sysgrp read
+
+EF-NDC-SSW-01 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (set\ sysgrp\ read) set sysgrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'set utilgrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set utilgrp read
+
+EF-NDC-SSW-01 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (set\ utilgrp\ read) set utilgrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'next\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: next
+
+EF-NDC-SSW-01 (accprofile) # 
+DEBUG:netmiko:Pattern found: (next) next
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (accprofile) # 
+DEBUG:netmiko:write_channel: b'edit "read_only_operator"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: edit "read_only_operator"
+new entry 'read_only_operator' added
+
+EF-NDC-SSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (edit\ "read_only_operator") edit "read_only_operator"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+new entry 'read_only_operator' added
+
+EF-NDC-SSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'set admingrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set admingrp read
+
+EF-NDC-SSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (set\ admingrp\ read) set admingrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'set exec-alias-grp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set exec-alias-grp read
+
+EF-NDC-SSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (set\ exec\-alias\-grp\ read) set exec-alias-grp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'set loggrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set loggrp read
+
+EF-NDC-SSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (set\ loggrp\ read) set loggrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'set mntgrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set mntgrp read
+
+EF-NDC-SSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (set\ mntgrp\ read) set mntgrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'set netgrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set netgrp read
+
+EF-NDC-SSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (set\ netgrp\ read) set netgrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'set pktmongrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set pktmongrp read
+
+EF-NDC-SSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (set\ pktmongrp\ read) set pktmongrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'set routegrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set routegrp read
+
+EF-NDC-SSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (set\ routegrp\ read) set routegrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'set swcoregrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set swcoregrp read
+
+EF-NDC-SSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (set\ swcoregrp\ read) set swcoregrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'set swmonguardgrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set swmonguardgrp read
+
+EF-NDC-SSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (set\ swmonguardgrp\ read) set swmonguardgrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'set sysgrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set sysgrp read
+
+EF-NDC-SSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (set\ sysgrp\ read) set sysgrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'set utilgrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set utilgrp read
+
+EF-NDC-SSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (set\ utilgrp\ read) set utilgrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'next\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: next
+
+EF-NDC-SSW-01 (accprofile) # 
+DEBUG:netmiko:Pattern found: (next) next
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (accprofile) # 
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: end
+
+EF-NDC-SSW-01 # 
+DEBUG:netmiko:Pattern found: (end) end
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 # 
+DEBUG:netmiko:write_channel: b'config system admin\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: config system admin
+
+EF-NDC-SSW-01 (admin) # 
+DEBUG:netmiko:Pattern found: (config\ system\ admin) config system admin
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (admin) # 
+DEBUG:netmiko:write_channel: b'edit "RADIUS_Admins"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: edit "RADIUS_Admins"
+
+EF-NDC-SSW-01 (RADIUS_Admins) # 
+DEBUG:netmiko:Pattern found: (edit\ "RADIUS_Admins") edit "RADIUS_Admins"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (RADIUS_Admins) # 
+DEBUG:netmiko:write_channel: b'set remote-auth enable\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set remote-auth enable
+
+EF-NDC-SSW-01 (RADIUS_Admins) # 
+DEBUG:netmiko:Pattern found: (set\ remote\-auth\ enable) set remote-auth enable
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (RADIUS_Admins) # 
+DEBUG:netmiko:write_channel: b'set accprofile "super_admin"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set accprofile "super_admin"
+
+EF-NDC-SSW-01 (RADIUS_Admins) # 
+DEBUG:netmiko:Pattern found: (set\ accprofile\ "super_admin") set accprofile "super_admin"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (RADIUS_Admins) # 
+DEBUG:netmiko:write_channel: b'set wildcard enable\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set wildcard enable
+
+EF-NDC-SSW-01 (RADIUS_Admins) # 
+DEBUG:netmiko:Pattern found: (set\ wildcard\ enable) set wildcard enable
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (RADIUS_Admins) # 
+DEBUG:netmiko:write_channel: b'set remote-group "Network-Switch Admins"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set remote-group "Network-Switch Admins"
+
+EF-NDC-SSW-01 (RADIUS_Admins) # 
+DEBUG:netmiko:Pattern found: (set\ remote\-group\ "Network\-Switch\ Admins") set remote-group "Network-Switch Admins"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (RADIUS_Admins) # 
+DEBUG:netmiko:write_channel: b'set accprofile-override enable\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set accprofile-override enable
+
+EF-NDC-SSW-01 (RADIUS_Admins) # 
+DEBUG:netmiko:Pattern found: (set\ accprofile\-override\ enable) set accprofile-override enable
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (RADIUS_Admins) # 
+DEBUG:netmiko:write_channel: b'next\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: next
+
+EF-NDC-SSW-01 (admin) # 
+DEBUG:netmiko:Pattern found: (next) next
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (admin) # 
+DEBUG:netmiko:write_channel: b'edit "RADIUS_Operators"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: edit "RADIUS_Operators"
+new entry 'RADIUS_Operators' added
+
+EF-NDC-SSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:Pattern found: (edit\ "RADIUS_Operators") edit "RADIUS_Operators"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+new entry 'RADIUS_Operators' added
+
+EF-NDC-SSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:write_channel: b'set remote-auth enable\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set remote-auth enable
+
+EF-NDC-SSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:Pattern found: (set\ remote\-auth\ enable) set remote-auth enable
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:write_channel: b'set trusthost1 10.255.2.0 255.255.255.0\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set trusthost1 10.255.2.0 255.255.255.0
+
+EF-NDC-SSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:Pattern found: (set\ trusthost1\ 10\.255\.2\.0\ 255\.255\.255\.0) set trusthost1 10.255.2.0 255.255.255.0
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:write_channel: b'set trusthost2 10.200.0.0 255.255.255.0\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set trusthost2 10.200.0.0 255.255.255.0
+
+EF-NDC-SSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:Pattern found: (set\ trusthost2\ 10\.200\.0\.0\ 255\.255\.255\.0) set trusthost2 10.200.0.0 255.255.255.0
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:write_channel: b'set trusthost3 10.200.128.0 255.255.255.0\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set trusthost3 10.200.128.0 255.255.255.0
+
+EF-NDC-SSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:Pattern found: (set\ trusthost3\ 10\.200\.128\.0\ 255\.255\.255\.0) set trusthost3 10.200.128.0 255.255.255.0
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:write_channel: b'set accprofile "read_only_operator"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set accprofile "read_only_operator"
+
+EF-NDC-SSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:Pattern found: (set\ accprofile\ "read_only_operator") set accprofile "read_only_operator"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:write_channel: b'set wildcard enable\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set wildcard enable
+
+EF-NDC-SSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:Pattern found: (set\ wildcard\ enable) set wildcard enable
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:write_channel: b'set remote-group "Network-Switch Operators"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set remote-group "Network-Switch Operators"
+
+EF-NDC-SSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:Pattern found: (set\ remote\-group\ "Network\-Switch\ Operators") set remote-group "Network-Switch Operators"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:write_channel: b'set accprofile-override enable\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set accprofile-override enable
+
+EF-NDC-SSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:Pattern found: (set\ accprofile\-override\ enable) set accprofile-override enable
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (RADIUS_Operators) # 
+DEBUG:netmiko:write_channel: b'next\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: next
+
+EF-NDC-SSW-01 (admin) # 
+DEBUG:netmiko:Pattern found: (next) next
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (admin) # 
+DEBUG:netmiko:write_channel: b'edit "RADIUS_Backup_Admins"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: edit "RADIUS_Backup_Admins"
+new entry 'RADIUS_Backup_Admins' added
+
+EF-NDC-SSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:Pattern found: (edit\ "RADIUS_Backup_Admins") edit "RADIUS_Backup_Admins"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+new entry 'RADIUS_Backup_Admins' added
+
+EF-NDC-SSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:write_channel: b'set remote-auth enable\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set remote-auth enable
+
+EF-NDC-SSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:Pattern found: (set\ remote\-auth\ enable) set remote-auth enable
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:write_channel: b'set trusthost1 172.28.0.13 255.255.255.255\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set trusthost1 172.28.0.13 255.255.255.255
+
+EF-NDC-SSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:Pattern found: (set\ trusthost1\ 172\.28\.0\.13\ 255\.255\.255\.255) set trusthost1 172.28.0.13 255.255.255.255
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:write_channel: b'set trusthost2 172.28.128.13 255.255.255.255\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set trusthost2 172.28.128.13 255.255.255.255
+
+EF-NDC-SSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:Pattern found: (set\ trusthost2\ 172\.28\.128\.13\ 255\.255\.255\.255) set trusthost2 172.28.128.13 255.255.255.255
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:write_channel: b'set trusthost3 10.200.0.0 255.255.255.0\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set trusthost3 10.200.0.0 255.255.255.0
+
+EF-NDC-SSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:Pattern found: (set\ trusthost3\ 10\.200\.0\.0\ 255\.255\.255\.0) set trusthost3 10.200.0.0 255.255.255.0
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:write_channel: b'set trusthost4 10.200.128.0 255.255.255.0\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set trusthost4 10.200.128.0 255.255.255.0
+
+EF-NDC-SSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:Pattern found: (set\ trusthost4\ 10\.200\.128\.0\ 255\.255\.255\.0) set trusthost4 10.200.128.0 255.255.255.0
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:write_channel: b'set accprofile "backup_admin"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set accprofile "backup_admin"
+
+EF-NDC-SSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:Pattern found: (set\ accprofile\ "backup_admin") set accprofile "backup_admin"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:write_channel: b'set wildcard enable\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set wildcard enable
+
+EF-NDC-SSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:Pattern found: (set\ wildcard\ enable) set wildcard enable
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:write_channel: b'set remote-group "Network-Backup Admins"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set remote-group "Network-Backup Admins"
+
+EF-NDC-SSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:Pattern found: (set\ remote\-group\ "Network\-Backup\ Admins") set remote-group "Network-Backup Admins"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:write_channel: b'set accprofile-override enable\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set accprofile-override enable
+
+EF-NDC-SSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:Pattern found: (set\ accprofile\-override\ enable) set accprofile-override enable
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:write_channel: b'next\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: next
+
+EF-NDC-SSW-01 (admin) # 
+DEBUG:netmiko:Pattern found: (next) next
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 (admin) # 
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: end
+
+EF-NDC-SSW-01 # 
+DEBUG:netmiko:Pattern found: (end) end
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-01\ .*$|#.*$)) 
+
+EF-NDC-SSW-01 # 
+DEBUG:netmiko:config user group
+
+EF-NDC-SSW-01 (group) # edit "Network-Switch Operators"
+new entry 'Network-Switch Operators' added
+
+EF-NDC-SSW-01 (Network-Switch ~p) # set group-type firewall
+
+EF-NDC-SSW-01 (Network-Switch ~p) # set authtimeout 0
+
+EF-NDC-SSW-01 (Network-Switch ~p) # set member "RADIUS_Servers"
+
+EF-NDC-SSW-01 (Network-Switch ~p) # next
+
+EF-NDC-SSW-01 (group) # edit "Network-Switch Admins"
+new entry 'Network-Switch Admins' added
+
+EF-NDC-SSW-01 (Network-Switch ~d) # set group-type firewall
+
+EF-NDC-SSW-01 (Network-Switch ~d) # set authtimeout 0
+
+EF-NDC-SSW-01 (Network-Switch ~d) # set member "RADIUS_Servers"
+
+EF-NDC-SSW-01 (Network-Switch ~d) # next
+
+EF-NDC-SSW-01 (group) # edit "Network-Backup Admins"
+new entry 'Network-Backup Admins' added
+
+EF-NDC-SSW-01 (Network-Backup ~d) # set group-type firewall
+
+EF-NDC-SSW-01 (Network-Backup ~d) # set authtimeout 0
+
+EF-NDC-SSW-01 (Network-Backup ~d) # set member "RADIUS_Servers"
+
+EF-NDC-SSW-01 (Network-Backup ~d) # next
+
+EF-NDC-SSW-01 (group) # end
+
+EF-NDC-SSW-01 # config system accprofile
+
+EF-NDC-SSW-01 (accprofile) # edit "backup_admin"
+new entry 'backup_admin' added
+
+EF-NDC-SSW-01 (backup_admin) # set admingrp read
+
+EF-NDC-SSW-01 (backup_admin) # set exec-alias-grp read
+
+EF-NDC-SSW-01 (backup_admin) # set loggrp read
+
+EF-NDC-SSW-01 (backup_admin) # set mntgrp read
+
+EF-NDC-SSW-01 (backup_admin) # set netgrp read
+
+EF-NDC-SSW-01 (backup_admin) # set pktmongrp read
+
+EF-NDC-SSW-01 (backup_admin) # set routegrp read
+
+EF-NDC-SSW-01 (backup_admin) # set swcoregrp read
+
+EF-NDC-SSW-01 (backup_admin) # set swmonguardgrp read
+
+EF-NDC-SSW-01 (backup_admin) # set sysgrp read
+
+EF-NDC-SSW-01 (backup_admin) # set utilgrp read
+
+EF-NDC-SSW-01 (backup_admin) # next
+
+EF-NDC-SSW-01 (accprofile) # edit "read_only_operator"
+new entry 'read_only_operator' added
+
+EF-NDC-SSW-01 (read_only_opera~o) # set admingrp read
+
+EF-NDC-SSW-01 (read_only_opera~o) # set exec-alias-grp read
+
+EF-NDC-SSW-01 (read_only_opera~o) # set loggrp read
+
+EF-NDC-SSW-01 (read_only_opera~o) # set mntgrp read
+
+EF-NDC-SSW-01 (read_only_opera~o) # set netgrp read
+
+EF-NDC-SSW-01 (read_only_opera~o) # set pktmongrp read
+
+EF-NDC-SSW-01 (read_only_opera~o) # set routegrp read
+
+EF-NDC-SSW-01 (read_only_opera~o) # set swcoregrp read
+
+EF-NDC-SSW-01 (read_only_opera~o) # set swmonguardgrp read
+
+EF-NDC-SSW-01 (read_only_opera~o) # set sysgrp read
+
+EF-NDC-SSW-01 (read_only_opera~o) # set utilgrp read
+
+EF-NDC-SSW-01 (read_only_opera~o) # next
+
+EF-NDC-SSW-01 (accprofile) # end
+
+EF-NDC-SSW-01 # config system admin
+
+EF-NDC-SSW-01 (admin) # edit "RADIUS_Admins"
+
+EF-NDC-SSW-01 (RADIUS_Admins) # set remote-auth enable
+
+EF-NDC-SSW-01 (RADIUS_Admins) # set accprofile "super_admin"
+
+EF-NDC-SSW-01 (RADIUS_Admins) # set wildcard enable
+
+EF-NDC-SSW-01 (RADIUS_Admins) # set remote-group "Network-Switch Admins"
+
+EF-NDC-SSW-01 (RADIUS_Admins) # set accprofile-override enable
+
+EF-NDC-SSW-01 (RADIUS_Admins) # next
+
+EF-NDC-SSW-01 (admin) # edit "RADIUS_Operators"
+new entry 'RADIUS_Operators' added
+
+EF-NDC-SSW-01 (RADIUS_Operators) # set remote-auth enable
+
+EF-NDC-SSW-01 (RADIUS_Operators) # set trusthost1 10.255.2.0 255.255.255.0
+
+EF-NDC-SSW-01 (RADIUS_Operators) # set trusthost2 10.200.0.0 255.255.255.0
+
+EF-NDC-SSW-01 (RADIUS_Operators) # set trusthost3 10.200.128.0 255.255.255.0
+
+EF-NDC-SSW-01 (RADIUS_Operators) # set accprofile "read_only_operator"
+
+EF-NDC-SSW-01 (RADIUS_Operators) # set wildcard enable
+
+EF-NDC-SSW-01 (RADIUS_Operators) # set remote-group "Network-Switch Operators"
+
+EF-NDC-SSW-01 (RADIUS_Operators) # set accprofile-override enable
+
+EF-NDC-SSW-01 (RADIUS_Operators) # next
+
+EF-NDC-SSW-01 (admin) # edit "RADIUS_Backup_Admins"
+new entry 'RADIUS_Backup_Admins' added
+
+EF-NDC-SSW-01 (RADIUS_Backup_A~m) # set remote-auth enable
+
+EF-NDC-SSW-01 (RADIUS_Backup_A~m) # set trusthost1 172.28.0.13 255.255.255.255
+
+EF-NDC-SSW-01 (RADIUS_Backup_A~m) # set trusthost2 172.28.128.13 255.255.255.255
+
+EF-NDC-SSW-01 (RADIUS_Backup_A~m) # set trusthost3 10.200.0.0 255.255.255.0
+
+EF-NDC-SSW-01 (RADIUS_Backup_A~m) # set trusthost4 10.200.128.0 255.255.255.0
+
+EF-NDC-SSW-01 (RADIUS_Backup_A~m) # set accprofile "backup_admin"
+
+EF-NDC-SSW-01 (RADIUS_Backup_A~m) # set wildcard enable
+
+EF-NDC-SSW-01 (RADIUS_Backup_A~m) # set remote-group "Network-Backup Admins"
+
+EF-NDC-SSW-01 (RADIUS_Backup_A~m) # set accprofile-override enable
+
+EF-NDC-SSW-01 (RADIUS_Backup_A~m) # next
+
+EF-NDC-SSW-01 (admin) # end
+
+EF-NDC-SSW-01 # 
+DEBUG:netmiko:write_channel: b'config system console\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: config system console
+
+DEBUG:netmiko:Pattern found: (config\ system\ console) config system console
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+EF-NDC-SSW-01 (console) # 
+DEBUG:netmiko:write_channel: b'set output more\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set output more
+
+DEBUG:netmiko:Pattern found: (set\ output\ more) set output more
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+EF-NDC-SSW-01 (console) # 
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: end
+
+DEBUG:netmiko:Pattern found: (end) end
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+EF-NDC-SSW-01 # 
+DEBUG:netmiko:write_channel: b'exit\n'
+DEBUG:paramiko.transport:EOF in transport thread
+DEBUG:paramiko.transport:starting thread (client mode): 0xcf7d07d0
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_3.5.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_9.6
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_9.6)
+DEBUG:paramiko.transport:=== Key exchange possibilities ===
+DEBUG:paramiko.transport:kex algos: sntrup761x25519-sha512@openssh.com, curve25519-sha256, curve25519-sha256@libssh.org, diffie-hellman-group-exchange-sha256, diffie-hellman-group16-sha512, diffie-hellman-group18-sha512, kex-strict-s-v00@openssh.com
+DEBUG:paramiko.transport:server key: ssh-ed25519
+DEBUG:paramiko.transport:client encrypt: chacha20-poly1305@openssh.com, aes128-ctr, aes192-ctr, aes256-ctr, aes128-gcm@openssh.com, aes256-gcm@openssh.com
+DEBUG:paramiko.transport:server encrypt: chacha20-poly1305@openssh.com, aes128-ctr, aes192-ctr, aes256-ctr, aes128-gcm@openssh.com, aes256-gcm@openssh.com
+DEBUG:paramiko.transport:client mac: umac-128-etm@openssh.com, hmac-sha2-256-etm@openssh.com, hmac-sha2-512-etm@openssh.com
+DEBUG:paramiko.transport:server mac: umac-128-etm@openssh.com, hmac-sha2-256-etm@openssh.com, hmac-sha2-512-etm@openssh.com
+DEBUG:paramiko.transport:client compress: none, zlib@openssh.com
+DEBUG:paramiko.transport:server compress: none, zlib@openssh.com
+DEBUG:paramiko.transport:client lang: <none>
+DEBUG:paramiko.transport:server lang: <none>
+DEBUG:paramiko.transport:kex follows: False
+DEBUG:paramiko.transport:=== Key exchange agreements ===
+DEBUG:paramiko.transport:Strict kex mode: True
+DEBUG:paramiko.transport:Kex: diffie-hellman-group-exchange-sha256
+DEBUG:paramiko.transport:HostKey: ssh-ed25519
+DEBUG:paramiko.transport:Cipher: aes128-ctr
+DEBUG:paramiko.transport:MAC: hmac-sha2-256-etm@openssh.com
+DEBUG:paramiko.transport:Compression: none
+DEBUG:paramiko.transport:=== End of kex handshake ===
+DEBUG:paramiko.transport:Got server p (8192 bits)
+DEBUG:paramiko.transport:Resetting outbound seqno after NEWKEYS due to strict mode
+DEBUG:paramiko.transport:kex engine KexGexSHA256 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Resetting inbound seqno after NEWKEYS due to strict mode
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for 10.200.131.12: b'7918b2d145926393df9c5487961aa22f'
+DEBUG:paramiko.transport:Got EXT_INFO: {'server-sig-algs': b'ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256', 'publickey-hostbound@openssh.com': b'0', 'ping@openssh.com': b'0'}
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:Received global request "hostkeys-00@openssh.com"
+DEBUG:paramiko.transport:Rejecting "hostkeys-00@openssh.com" global request from server.
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: EF-NDC-SSW-02 # 
+DEBUG:netmiko:Pattern found: (to accept|[#$]) EF-NDC-SSW-02 #
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+EF-NDC-SSW-02 # 
+DEBUG:netmiko:Pattern found: ([#$]) 
+EF-NDC-SSW-02 #
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is EF-NDC-SSW-02 #
+DEBUG:netmiko:write_channel: b'get system status | grep Virtual\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: get system status | grep Virtual
+
+DEBUG:netmiko:Pattern found: (get\ system\ status\ \|\ grep\ Virtual) get system status | grep Virtual
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+EF-NDC-SSW-02 # 
+DEBUG:netmiko:write_channel: b'get system status | grep Version\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: get system status | grep Version
+
+DEBUG:netmiko:Pattern found: (get\ system\ status\ \|\ grep\ Version) get system status | grep Version
+DEBUG:netmiko:read_channel: Version: FortiSwitch-2048F v7.2.8,build0495,240524 (GA)
+
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+EF-NDC-SSW-02 # 
+DEBUG:netmiko:write_channel: b'get system console\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: get system console
+
+DEBUG:netmiko:Pattern found: (get\ system\ console) get system console
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: baudrate            : 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 115200
+hostname-display-length: 17
+login               : enable 
+mode                : line 
+output              : more 
+
+EF-NDC-SSW-02 # 
+DEBUG:netmiko:write_channel: b'config system console\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: config system console
+
+DEBUG:netmiko:Pattern found: (config\ system\ console) config system console
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+EF-NDC-SSW-02 (console) # 
+DEBUG:netmiko:write_channel: b'set output standard\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set output standard
+
+DEBUG:netmiko:Pattern found: (set\ output\ standard) set output standard
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+EF-NDC-SSW-02 (console) # 
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: end
+
+DEBUG:netmiko:Pattern found: (end) end
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+EF-NDC-SSW-02 # 
+DEBUG:netmiko:write_channel: b'config user group\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: config user group
+
+EF-NDC-SSW-02 (group) # 
+DEBUG:netmiko:Pattern found: (config\ user\ group) config user group
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (group) # 
+DEBUG:netmiko:write_channel: b'edit "Network-Switch Operators"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: edit "Network-Switch Operators"
+new entry 'Network-Switch Operators' added
+
+EF-NDC-SSW-02 (Network-Switch ~p) # 
+DEBUG:netmiko:Pattern found: (edit\ "Network\-Switch\ Operators") edit "Network-Switch Operators"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+new entry 'Network-Switch Operators' added
+
+EF-NDC-SSW-02 (Network-Switch ~p) # 
+DEBUG:netmiko:write_channel: b'set group-type firewall\n'
+DEBUG:netmiko:read_channel: set group-type firewall
+
+EF-NDC-SSW-02 (Network-Switch ~p) # 
+DEBUG:netmiko:Pattern found: (set\ group\-type\ firewall) set group-type firewall
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (Network-Switch ~p) # 
+DEBUG:netmiko:write_channel: b'set authtimeout 0\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set authtimeout 0
+
+EF-NDC-SSW-02 (Network-Switch ~p) # 
+DEBUG:netmiko:Pattern found: (set\ authtimeout\ 0) set authtimeout 0
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (Network-Switch ~p) # 
+DEBUG:netmiko:write_channel: b'set member "RADIUS_Servers"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set member "RADIUS_Servers"
+
+EF-NDC-SSW-02 (Network-Switch ~p) # 
+DEBUG:netmiko:Pattern found: (set\ member\ "RADIUS_Servers") set member "RADIUS_Servers"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (Network-Switch ~p) # 
+DEBUG:netmiko:write_channel: b'next\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: next
+
+EF-NDC-SSW-02 (group) # 
+DEBUG:netmiko:Pattern found: (next) next
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (group) # 
+DEBUG:netmiko:write_channel: b'edit "Network-Switch Admins"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: edit "Network-Switch Admins"
+new entry 'Network-Switch Admins' added
+
+EF-NDC-SSW-02 (Network-Switch ~d) # 
+DEBUG:netmiko:Pattern found: (edit\ "Network\-Switch\ Admins") edit "Network-Switch Admins"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+new entry 'Network-Switch Admins' added
+
+EF-NDC-SSW-02 (Network-Switch ~d) # 
+DEBUG:netmiko:write_channel: b'set group-type firewall\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set group-type firewall
+
+EF-NDC-SSW-02 (Network-Switch ~d) # 
+DEBUG:netmiko:Pattern found: (set\ group\-type\ firewall) set group-type firewall
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (Network-Switch ~d) # 
+DEBUG:netmiko:write_channel: b'set authtimeout 0\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set authtimeout 0
+
+EF-NDC-SSW-02 (Network-Switch ~d) # 
+DEBUG:netmiko:Pattern found: (set\ authtimeout\ 0) set authtimeout 0
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (Network-Switch ~d) # 
+DEBUG:netmiko:write_channel: b'set member "RADIUS_Servers"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set member "RADIUS_Servers"
+
+EF-NDC-SSW-02 (Network-Switch ~d) # 
+DEBUG:netmiko:Pattern found: (set\ member\ "RADIUS_Servers") set member "RADIUS_Servers"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (Network-Switch ~d) # 
+DEBUG:netmiko:write_channel: b'next\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: next
+
+EF-NDC-SSW-02 (group) # 
+DEBUG:netmiko:Pattern found: (next) next
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (group) # 
+DEBUG:netmiko:write_channel: b'edit "Network-Backup Admins"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: edit "Network-Backup Admins"
+new entry 'Network-Backup Admins' added
+
+EF-NDC-SSW-02 (Network-Backup ~d) # 
+DEBUG:netmiko:Pattern found: (edit\ "Network\-Backup\ Admins") edit "Network-Backup Admins"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+new entry 'Network-Backup Admins' added
+
+EF-NDC-SSW-02 (Network-Backup ~d) # 
+DEBUG:netmiko:write_channel: b'set group-type firewall\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set group-type firewall
+
+EF-NDC-SSW-02 (Network-Backup ~d) # 
+DEBUG:netmiko:Pattern found: (set\ group\-type\ firewall) set group-type firewall
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (Network-Backup ~d) # 
+DEBUG:netmiko:write_channel: b'set authtimeout 0\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set authtimeout 0
+
+EF-NDC-SSW-02 (Network-Backup ~d) # 
+DEBUG:netmiko:Pattern found: (set\ authtimeout\ 0) set authtimeout 0
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (Network-Backup ~d) # 
+DEBUG:netmiko:write_channel: b'set member "RADIUS_Servers"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set member "RADIUS_Servers"
+
+EF-NDC-SSW-02 (Network-Backup ~d) # 
+DEBUG:netmiko:Pattern found: (set\ member\ "RADIUS_Servers") set member "RADIUS_Servers"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (Network-Backup ~d) # 
+DEBUG:netmiko:write_channel: b'next\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: next
+
+EF-NDC-SSW-02 (group) # 
+DEBUG:netmiko:Pattern found: (next) next
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (group) # 
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: end
+
+EF-NDC-SSW-02 # 
+DEBUG:netmiko:Pattern found: (end) end
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 # 
+DEBUG:netmiko:write_channel: b'config system accprofile\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: config system accprofile
+
+EF-NDC-SSW-02 (accprofile) # 
+DEBUG:netmiko:Pattern found: (config\ system\ accprofile) config system accprofile
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (accprofile) # 
+DEBUG:netmiko:write_channel: b'edit "backup_admin"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: edit "backup_admin"
+new entry 'backup_admin' added
+
+EF-NDC-SSW-02 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (edit\ "backup_admin") edit "backup_admin"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+new entry 'backup_admin' added
+
+EF-NDC-SSW-02 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'set admingrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set admingrp read
+
+EF-NDC-SSW-02 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (set\ admingrp\ read) set admingrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'set exec-alias-grp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set exec-alias-grp read
+
+EF-NDC-SSW-02 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (set\ exec\-alias\-grp\ read) set exec-alias-grp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'set loggrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set loggrp read
+
+EF-NDC-SSW-02 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (set\ loggrp\ read) set loggrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'set mntgrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set mntgrp read
+
+EF-NDC-SSW-02 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (set\ mntgrp\ read) set mntgrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'set netgrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set netgrp read
+
+EF-NDC-SSW-02 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (set\ netgrp\ read) set netgrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'set pktmongrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set pktmongrp read
+
+EF-NDC-SSW-02 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (set\ pktmongrp\ read) set pktmongrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'set routegrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set routegrp read
+
+EF-NDC-SSW-02 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (set\ routegrp\ read) set routegrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'set swcoregrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set swcoregrp read
+
+EF-NDC-SSW-02 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (set\ swcoregrp\ read) set swcoregrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'set swmonguardgrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set swmonguardgrp read
+
+EF-NDC-SSW-02 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (set\ swmonguardgrp\ read) set swmonguardgrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'set sysgrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set sysgrp read
+
+EF-NDC-SSW-02 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (set\ sysgrp\ read) set sysgrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'set utilgrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set utilgrp read
+
+EF-NDC-SSW-02 (backup_admin) # 
+DEBUG:netmiko:Pattern found: (set\ utilgrp\ read) set utilgrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (backup_admin) # 
+DEBUG:netmiko:write_channel: b'next\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: next
+
+EF-NDC-SSW-02 (accprofile) # 
+DEBUG:netmiko:Pattern found: (next) next
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (accprofile) # 
+DEBUG:netmiko:write_channel: b'edit "read_only_operator"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: edit "read_only_operator"
+new entry 'read_only_operator' added
+
+EF-NDC-SSW-02 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (edit\ "read_only_operator") edit "read_only_operator"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+new entry 'read_only_operator' added
+
+EF-NDC-SSW-02 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'set admingrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set admingrp read
+
+EF-NDC-SSW-02 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (set\ admingrp\ read) set admingrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'set exec-alias-grp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set exec-alias-grp read
+
+EF-NDC-SSW-02 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (set\ exec\-alias\-grp\ read) set exec-alias-grp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'set loggrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set loggrp read
+
+EF-NDC-SSW-02 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (set\ loggrp\ read) set loggrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'set mntgrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set mntgrp read
+
+EF-NDC-SSW-02 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (set\ mntgrp\ read) set mntgrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'set netgrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set netgrp read
+
+EF-NDC-SSW-02 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (set\ netgrp\ read) set netgrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'set pktmongrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set pktmongrp read
+
+EF-NDC-SSW-02 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (set\ pktmongrp\ read) set pktmongrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'set routegrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set routegrp read
+
+EF-NDC-SSW-02 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (set\ routegrp\ read) set routegrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'set swcoregrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set swcoregrp read
+
+EF-NDC-SSW-02 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (set\ swcoregrp\ read) set swcoregrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'set swmonguardgrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set swmonguardgrp read
+
+EF-NDC-SSW-02 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (set\ swmonguardgrp\ read) set swmonguardgrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'set sysgrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set sysgrp read
+
+EF-NDC-SSW-02 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (set\ sysgrp\ read) set sysgrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'set utilgrp read\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set utilgrp read
+
+EF-NDC-SSW-02 (read_only_opera~o) # 
+DEBUG:netmiko:Pattern found: (set\ utilgrp\ read) set utilgrp read
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (read_only_opera~o) # 
+DEBUG:netmiko:write_channel: b'next\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: next
+
+EF-NDC-SSW-02 (accprofile) # 
+DEBUG:netmiko:Pattern found: (next) next
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (accprofile) # 
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: end
+
+EF-NDC-SSW-02 # 
+DEBUG:netmiko:Pattern found: (end) end
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 # 
+DEBUG:netmiko:write_channel: b'config system admin\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: config system admin
+
+EF-NDC-SSW-02 (admin) # 
+DEBUG:netmiko:Pattern found: (config\ system\ admin) config system admin
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (admin) # 
+DEBUG:netmiko:write_channel: b'edit "RADIUS_Admins"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: edit "RADIUS_Admins"
+
+EF-NDC-SSW-02 (RADIUS_Admins) # 
+DEBUG:netmiko:Pattern found: (edit\ "RADIUS_Admins") edit "RADIUS_Admins"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (RADIUS_Admins) # 
+DEBUG:netmiko:write_channel: b'set remote-auth enable\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set remote-auth enable
+
+EF-NDC-SSW-02 (RADIUS_Admins) # 
+DEBUG:netmiko:Pattern found: (set\ remote\-auth\ enable) set remote-auth enable
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (RADIUS_Admins) # 
+DEBUG:netmiko:write_channel: b'set accprofile "super_admin"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set accprofile "super_admin"
+
+EF-NDC-SSW-02 (RADIUS_Admins) # 
+DEBUG:netmiko:Pattern found: (set\ accprofile\ "super_admin") set accprofile "super_admin"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (RADIUS_Admins) # 
+DEBUG:netmiko:write_channel: b'set wildcard enable\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set wildcard enable
+
+EF-NDC-SSW-02 (RADIUS_Admins) # 
+DEBUG:netmiko:Pattern found: (set\ wildcard\ enable) set wildcard enable
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (RADIUS_Admins) # 
+DEBUG:netmiko:write_channel: b'set remote-group "Network-Switch Admins"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set remote-group "Network-Switch Admins"
+
+EF-NDC-SSW-02 (RADIUS_Admins) # 
+DEBUG:netmiko:Pattern found: (set\ remote\-group\ "Network\-Switch\ Admins") set remote-group "Network-Switch Admins"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (RADIUS_Admins) # 
+DEBUG:netmiko:write_channel: b'set accprofile-override enable\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set accprofile-override enable
+
+EF-NDC-SSW-02 (RADIUS_Admins) # 
+DEBUG:netmiko:Pattern found: (set\ accprofile\-override\ enable) set accprofile-override enable
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (RADIUS_Admins) # 
+DEBUG:netmiko:write_channel: b'next\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: next
+
+EF-NDC-SSW-02 (admin) # 
+DEBUG:netmiko:Pattern found: (next) next
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (admin) # 
+DEBUG:netmiko:write_channel: b'edit "RADIUS_Operators"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: edit "RADIUS_Operators"
+new entry 'RADIUS_Operators' added
+
+EF-NDC-SSW-02 (RADIUS_Operators) # 
+DEBUG:netmiko:Pattern found: (edit\ "RADIUS_Operators") edit "RADIUS_Operators"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+new entry 'RADIUS_Operators' added
+
+EF-NDC-SSW-02 (RADIUS_Operators) # 
+DEBUG:netmiko:write_channel: b'set remote-auth enable\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set remote-auth enable
+
+EF-NDC-SSW-02 (RADIUS_Operators) # 
+DEBUG:netmiko:Pattern found: (set\ remote\-auth\ enable) set remote-auth enable
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (RADIUS_Operators) # 
+DEBUG:netmiko:write_channel: b'set trusthost1 10.255.2.0 255.255.255.0\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set trusthost1 10.255.2.0 255.255.255.0
+
+EF-NDC-SSW-02 (RADIUS_Operators) # 
+DEBUG:netmiko:Pattern found: (set\ trusthost1\ 10\.255\.2\.0\ 255\.255\.255\.0) set trusthost1 10.255.2.0 255.255.255.0
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (RADIUS_Operators) # 
+DEBUG:netmiko:write_channel: b'set trusthost2 10.200.0.0 255.255.255.0\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set trusthost2 10.200.0.0 255.255.255.0
+
+EF-NDC-SSW-02 (RADIUS_Operators) # 
+DEBUG:netmiko:Pattern found: (set\ trusthost2\ 10\.200\.0\.0\ 255\.255\.255\.0) set trusthost2 10.200.0.0 255.255.255.0
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (RADIUS_Operators) # 
+DEBUG:netmiko:write_channel: b'set trusthost3 10.200.128.0 255.255.255.0\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set trusthost3 10.200.128.0 255.255.255.0
+
+EF-NDC-SSW-02 (RADIUS_Operators) # 
+DEBUG:netmiko:Pattern found: (set\ trusthost3\ 10\.200\.128\.0\ 255\.255\.255\.0) set trusthost3 10.200.128.0 255.255.255.0
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (RADIUS_Operators) # 
+DEBUG:netmiko:write_channel: b'set accprofile "read_only_operator"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set accprofile "read_only_operator"
+
+EF-NDC-SSW-02 (RADIUS_Operators) # 
+DEBUG:netmiko:Pattern found: (set\ accprofile\ "read_only_operator") set accprofile "read_only_operator"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (RADIUS_Operators) # 
+DEBUG:netmiko:write_channel: b'set wildcard enable\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set wildcard enable
+
+EF-NDC-SSW-02 (RADIUS_Operators) # 
+DEBUG:netmiko:Pattern found: (set\ wildcard\ enable) set wildcard enable
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (RADIUS_Operators) # 
+DEBUG:netmiko:write_channel: b'set remote-group "Network-Switch Operators"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set remote-group "Network-Switch Operators"
+
+EF-NDC-SSW-02 (RADIUS_Operators) # 
+DEBUG:netmiko:Pattern found: (set\ remote\-group\ "Network\-Switch\ Operators") set remote-group "Network-Switch Operators"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (RADIUS_Operators) # 
+DEBUG:netmiko:write_channel: b'set accprofile-override enable\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set accprofile-override enable
+
+EF-NDC-SSW-02 (RADIUS_Operators) # 
+DEBUG:netmiko:Pattern found: (set\ accprofile\-override\ enable) set accprofile-override enable
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (RADIUS_Operators) # 
+DEBUG:netmiko:write_channel: b'next\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: next
+
+EF-NDC-SSW-02 (admin) # 
+DEBUG:netmiko:Pattern found: (next) next
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (admin) # 
+DEBUG:netmiko:write_channel: b'edit "RADIUS_Backup_Admins"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: edit "RADIUS_Backup_Admins"
+new entry 'RADIUS_Backup_Admins' added
+
+EF-NDC-SSW-02 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:Pattern found: (edit\ "RADIUS_Backup_Admins") edit "RADIUS_Backup_Admins"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+new entry 'RADIUS_Backup_Admins' added
+
+EF-NDC-SSW-02 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:write_channel: b'set remote-auth enable\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set remote-auth enable
+
+EF-NDC-SSW-02 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:Pattern found: (set\ remote\-auth\ enable) set remote-auth enable
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:write_channel: b'set trusthost1 172.28.0.13 255.255.255.255\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set trusthost1 172.28.0.13 255.255.255.255
+
+EF-NDC-SSW-02 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:Pattern found: (set\ trusthost1\ 172\.28\.0\.13\ 255\.255\.255\.255) set trusthost1 172.28.0.13 255.255.255.255
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:write_channel: b'set trusthost2 172.28.128.13 255.255.255.255\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set trusthost2 172.28.128.13 255.255.255.255
+
+EF-NDC-SSW-02 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:Pattern found: (set\ trusthost2\ 172\.28\.128\.13\ 255\.255\.255\.255) set trusthost2 172.28.128.13 255.255.255.255
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:write_channel: b'set trusthost3 10.200.0.0 255.255.255.0\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set trusthost3 10.200.0.0 255.255.255.0
+
+EF-NDC-SSW-02 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:Pattern found: (set\ trusthost3\ 10\.200\.0\.0\ 255\.255\.255\.0) set trusthost3 10.200.0.0 255.255.255.0
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:write_channel: b'set trusthost4 10.200.128.0 255.255.255.0\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set trusthost4 10.200.128.0 255.255.255.0
+
+EF-NDC-SSW-02 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:Pattern found: (set\ trusthost4\ 10\.200\.128\.0\ 255\.255\.255\.0) set trusthost4 10.200.128.0 255.255.255.0
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:write_channel: b'set accprofile "backup_admin"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set accprofile "backup_admin"
+
+EF-NDC-SSW-02 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:Pattern found: (set\ accprofile\ "backup_admin") set accprofile "backup_admin"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:write_channel: b'set wildcard enable\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set wildcard enable
+
+EF-NDC-SSW-02 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:Pattern found: (set\ wildcard\ enable) set wildcard enable
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:write_channel: b'set remote-group "Network-Backup Admins"\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set remote-group "Network-Backup Admins"
+
+EF-NDC-SSW-02 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:Pattern found: (set\ remote\-group\ "Network\-Backup\ Admins") set remote-group "Network-Backup Admins"
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:write_channel: b'set accprofile-override enable\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set accprofile-override enable
+
+EF-NDC-SSW-02 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:Pattern found: (set\ accprofile\-override\ enable) set accprofile-override enable
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (RADIUS_Backup_A~m) # 
+DEBUG:netmiko:write_channel: b'next\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: next
+
+EF-NDC-SSW-02 (admin) # 
+DEBUG:netmiko:Pattern found: (next) next
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 (admin) # 
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: end
+
+EF-NDC-SSW-02 # 
+DEBUG:netmiko:Pattern found: (end) end
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:EF\-NDC\-SSW\-02\ .*$|#.*$)) 
+
+EF-NDC-SSW-02 # 
+DEBUG:netmiko:config user group
+
+EF-NDC-SSW-02 (group) # edit "Network-Switch Operators"
+new entry 'Network-Switch Operators' added
+
+EF-NDC-SSW-02 (Network-Switch ~p) # set group-type firewall
+
+EF-NDC-SSW-02 (Network-Switch ~p) # set authtimeout 0
+
+EF-NDC-SSW-02 (Network-Switch ~p) # set member "RADIUS_Servers"
+
+EF-NDC-SSW-02 (Network-Switch ~p) # next
+
+EF-NDC-SSW-02 (group) # edit "Network-Switch Admins"
+new entry 'Network-Switch Admins' added
+
+EF-NDC-SSW-02 (Network-Switch ~d) # set group-type firewall
+
+EF-NDC-SSW-02 (Network-Switch ~d) # set authtimeout 0
+
+EF-NDC-SSW-02 (Network-Switch ~d) # set member "RADIUS_Servers"
+
+EF-NDC-SSW-02 (Network-Switch ~d) # next
+
+EF-NDC-SSW-02 (group) # edit "Network-Backup Admins"
+new entry 'Network-Backup Admins' added
+
+EF-NDC-SSW-02 (Network-Backup ~d) # set group-type firewall
+
+EF-NDC-SSW-02 (Network-Backup ~d) # set authtimeout 0
+
+EF-NDC-SSW-02 (Network-Backup ~d) # set member "RADIUS_Servers"
+
+EF-NDC-SSW-02 (Network-Backup ~d) # next
+
+EF-NDC-SSW-02 (group) # end
+
+EF-NDC-SSW-02 # config system accprofile
+
+EF-NDC-SSW-02 (accprofile) # edit "backup_admin"
+new entry 'backup_admin' added
+
+EF-NDC-SSW-02 (backup_admin) # set admingrp read
+
+EF-NDC-SSW-02 (backup_admin) # set exec-alias-grp read
+
+EF-NDC-SSW-02 (backup_admin) # set loggrp read
+
+EF-NDC-SSW-02 (backup_admin) # set mntgrp read
+
+EF-NDC-SSW-02 (backup_admin) # set netgrp read
+
+EF-NDC-SSW-02 (backup_admin) # set pktmongrp read
+
+EF-NDC-SSW-02 (backup_admin) # set routegrp read
+
+EF-NDC-SSW-02 (backup_admin) # set swcoregrp read
+
+EF-NDC-SSW-02 (backup_admin) # set swmonguardgrp read
+
+EF-NDC-SSW-02 (backup_admin) # set sysgrp read
+
+EF-NDC-SSW-02 (backup_admin) # set utilgrp read
+
+EF-NDC-SSW-02 (backup_admin) # next
+
+EF-NDC-SSW-02 (accprofile) # edit "read_only_operator"
+new entry 'read_only_operator' added
+
+EF-NDC-SSW-02 (read_only_opera~o) # set admingrp read
+
+EF-NDC-SSW-02 (read_only_opera~o) # set exec-alias-grp read
+
+EF-NDC-SSW-02 (read_only_opera~o) # set loggrp read
+
+EF-NDC-SSW-02 (read_only_opera~o) # set mntgrp read
+
+EF-NDC-SSW-02 (read_only_opera~o) # set netgrp read
+
+EF-NDC-SSW-02 (read_only_opera~o) # set pktmongrp read
+
+EF-NDC-SSW-02 (read_only_opera~o) # set routegrp read
+
+EF-NDC-SSW-02 (read_only_opera~o) # set swcoregrp read
+
+EF-NDC-SSW-02 (read_only_opera~o) # set swmonguardgrp read
+
+EF-NDC-SSW-02 (read_only_opera~o) # set sysgrp read
+
+EF-NDC-SSW-02 (read_only_opera~o) # set utilgrp read
+
+EF-NDC-SSW-02 (read_only_opera~o) # next
+
+EF-NDC-SSW-02 (accprofile) # end
+
+EF-NDC-SSW-02 # config system admin
+
+EF-NDC-SSW-02 (admin) # edit "RADIUS_Admins"
+
+EF-NDC-SSW-02 (RADIUS_Admins) # set remote-auth enable
+
+EF-NDC-SSW-02 (RADIUS_Admins) # set accprofile "super_admin"
+
+EF-NDC-SSW-02 (RADIUS_Admins) # set wildcard enable
+
+EF-NDC-SSW-02 (RADIUS_Admins) # set remote-group "Network-Switch Admins"
+
+EF-NDC-SSW-02 (RADIUS_Admins) # set accprofile-override enable
+
+EF-NDC-SSW-02 (RADIUS_Admins) # next
+
+EF-NDC-SSW-02 (admin) # edit "RADIUS_Operators"
+new entry 'RADIUS_Operators' added
+
+EF-NDC-SSW-02 (RADIUS_Operators) # set remote-auth enable
+
+EF-NDC-SSW-02 (RADIUS_Operators) # set trusthost1 10.255.2.0 255.255.255.0
+
+EF-NDC-SSW-02 (RADIUS_Operators) # set trusthost2 10.200.0.0 255.255.255.0
+
+EF-NDC-SSW-02 (RADIUS_Operators) # set trusthost3 10.200.128.0 255.255.255.0
+
+EF-NDC-SSW-02 (RADIUS_Operators) # set accprofile "read_only_operator"
+
+EF-NDC-SSW-02 (RADIUS_Operators) # set wildcard enable
+
+EF-NDC-SSW-02 (RADIUS_Operators) # set remote-group "Network-Switch Operators"
+
+EF-NDC-SSW-02 (RADIUS_Operators) # set accprofile-override enable
+
+EF-NDC-SSW-02 (RADIUS_Operators) # next
+
+EF-NDC-SSW-02 (admin) # edit "RADIUS_Backup_Admins"
+new entry 'RADIUS_Backup_Admins' added
+
+EF-NDC-SSW-02 (RADIUS_Backup_A~m) # set remote-auth enable
+
+EF-NDC-SSW-02 (RADIUS_Backup_A~m) # set trusthost1 172.28.0.13 255.255.255.255
+
+EF-NDC-SSW-02 (RADIUS_Backup_A~m) # set trusthost2 172.28.128.13 255.255.255.255
+
+EF-NDC-SSW-02 (RADIUS_Backup_A~m) # set trusthost3 10.200.0.0 255.255.255.0
+
+EF-NDC-SSW-02 (RADIUS_Backup_A~m) # set trusthost4 10.200.128.0 255.255.255.0
+
+EF-NDC-SSW-02 (RADIUS_Backup_A~m) # set accprofile "backup_admin"
+
+EF-NDC-SSW-02 (RADIUS_Backup_A~m) # set wildcard enable
+
+EF-NDC-SSW-02 (RADIUS_Backup_A~m) # set remote-group "Network-Backup Admins"
+
+EF-NDC-SSW-02 (RADIUS_Backup_A~m) # set accprofile-override enable
+
+EF-NDC-SSW-02 (RADIUS_Backup_A~m) # next
+
+EF-NDC-SSW-02 (admin) # end
+
+EF-NDC-SSW-02 # 
+DEBUG:netmiko:write_channel: b'config system console\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: config system console
+
+DEBUG:netmiko:Pattern found: (config\ system\ console) config system console
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+EF-NDC-SSW-02 (console) # 
+DEBUG:netmiko:write_channel: b'set output more\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: set output more
+
+DEBUG:netmiko:Pattern found: (set\ output\ more) set output more
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+EF-NDC-SSW-02 (console) # 
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: end
+
+DEBUG:netmiko:Pattern found: (end) end
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+EF-NDC-SSW-02 # 
+DEBUG:netmiko:write_channel: b'exit\n'
+DEBUG:paramiko.transport:EOF in transport thread
