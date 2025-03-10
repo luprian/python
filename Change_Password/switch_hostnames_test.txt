@@ -1,0 +1,2 @@
+SWITCHNAME1.home.local
+SWITCHNAME2.home.local
